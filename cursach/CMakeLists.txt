@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.0)
+project(racing_simulator)
+add_executable(racing_simulator racing_simulator.cpp "air.h" "air.cpp")
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(my_lib SHARED race.h race.cpp "earthair.cpp" "earthair.h" "earth.h" "earth.cpp" "boots.h" "boots.cpp" "air.h" "air.cpp")
+target_link_libraries(racing_simulator my_lib)
