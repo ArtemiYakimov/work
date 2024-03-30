@@ -6,6 +6,6 @@ using namespace std;
 class Earth: public Earthair {
 private:
 protected:
-	int time;
+	int time = 0;
 public:
 };
