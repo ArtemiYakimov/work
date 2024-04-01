@@ -8,6 +8,7 @@ protected:
 	string name;
 	int type, speed;
 	int all_time;
+	int time;
 public:
 	string get_name();
 	int get_type();

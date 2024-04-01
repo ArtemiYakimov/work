@@ -1,7 +1,7 @@
 #pragma once
-#include "earth.h"
+#include "earthair.h"
 
-class Camel : public Earth {
+class Camel : public Earthair {
 private:
 	int first = 5, last = 8;
 protected:

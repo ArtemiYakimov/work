@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22.0)
 project(racing_exe)
-add_executable(racing_exe main.cpp)
+add_executable(racing_exe main.cpp "camel.h" "camel.cpp" "centaur.h" "centaur.cpp"  "camel is fast.h" "camel is fast.cpp")
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-add_library(my_lib SHARED race.h race.cpp "earthair.cpp" "earthair.h" "earth.h" "earth.cpp" "boots.h" "boots.cpp" "air.h" "air.cpp")
+add_library(my_lib SHARED race.h race.cpp "earthair.cpp" "earthair.h"   "boots.h" "boots.cpp"  )
 target_link_libraries(racing_exe my_lib)

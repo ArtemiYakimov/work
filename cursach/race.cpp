@@ -4,7 +4,7 @@
 string Race::get_all_name() {
 	string t = "";
 	for (int i = 0; i < this->size; i++) {
-		t += this->arr[i].get_name() + (i <= this->size ? "" : ", ");
+		t += this->arr[i].get_name() + (i >= this->size ? "" : ", ");
 	}
 	return t;
 };
@@ -56,6 +56,6 @@ void Race::start() {
 	}
 	cout << "Результаты гонки:" << endl;
 	for (int i = 0; i < this->size; i++) {
-		cout << (i + 1) << this->arr[i].get_name() << ". Время: " << this->arr[i].get_all_time() << endl;
+		cout << (i + 1)<< ". " << this->arr[i].get_name() << ". Время: " << this->arr[i].get_all_time() << endl;
 	}
 };

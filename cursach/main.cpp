@@ -2,7 +2,6 @@
 #include <Windows.h>
 #include "race.h"
 #include "earthair.h"
-#include "earth.h"
 #include "boots.h"
 #include "camel.h"
 #include "camel is fast.h"
