@@ -9,7 +9,7 @@ private:
 	int type = 0;//1. земля, 2. воздух, 3. и то и то
 	int length = 0;//длина 
 	int size = 0;
-	Earthair arr[7];
+	Earthair* arr[7];
 protected:
 public:
 	Race(int type, int length) {
@@ -17,6 +17,6 @@ public:
 		this->length = length;
 	}
 	string get_all_name();
-	string add(Earthair other);
+	string add(Earthair* other);
 	void start();
 };

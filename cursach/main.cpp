@@ -91,10 +91,10 @@ int main() {
             cin >> choice;
 
             if (choice == 1) {
-                cout << race.add(boot) << endl;
+                cout << race.add(&boot) << endl;
             }
             else if (choice == 3) {
-                cout << race.add(camel) << endl;
+                cout << race.add(&camel) << endl;
             }
             else if (choice == 0) {
                 flag = false;
