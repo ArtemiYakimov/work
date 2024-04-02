@@ -3,9 +3,6 @@
 void Centaur::time_tranport(int s) {
 	int t = s / this->speed;
 	int stop = t / this->time;
-	if (t % this->time == 0) {
-		stop -= 1;
-	}
 	int x = 0;
 
 	if (stop == 1) {

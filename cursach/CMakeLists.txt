@@ -9,5 +9,5 @@ add_library(my_lib SHARED
 	"camel.h" "camel.cpp"
 	"centaur.h" "centaur.cpp"
 	"camel is fast.h" "camel is fast.cpp"
- "broomstick.h" "broomstick.cpp" "magic carpet.cpp" "magic carpet.h" "eagle.h" "eagle.cpp")
+)
 target_link_libraries(racing_exe my_lib)

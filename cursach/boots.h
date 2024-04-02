@@ -7,7 +7,7 @@ private:
 protected:
 public:
 	//Boots():Earth("Ботинки - вездеходы", 6, 60) {
-	Boots() {
+	Boots():Earthair() {
 		this->name = "Ботинки-вездеходы";
 		this->speed = 6;
 		this->time = 60;
