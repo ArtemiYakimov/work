@@ -1,5 +1,5 @@
 #include "race.h"
-#include <iostream>
+#include <string>
 
 string Race::get_all_name() {
 	string t = "";
@@ -10,7 +10,7 @@ string Race::get_all_name() {
 };
 
 string Race::add(Earthair* other) {
-	if ((*other).get_type() == this->type) {
+	if ((*other).get_type() == this->type || this->type == 3) {
 		bool flag = false;
 
 		for (int i = 0; i < this->size; i++) {
@@ -34,7 +34,7 @@ string Race::add(Earthair* other) {
 	}
 };
 
-void Race::start() {
+string Race::start() {
 	for (int i = 0; i < this->size; i++) {
 		(*this->arr[i]).time_tranport(this->length);
 	}
@@ -54,7 +54,15 @@ void Race::start() {
 		this->arr[i] = other;
 	}
 
+	string text = "";
 	for (int i = 0; i < this->size; i++) {
-		cout << (i + 1) << ". " << (*this->arr[i]).get_name() << ". Время: " << (*this->arr[i]).get_all_time() << endl;
+		text += to_string(i + 1) + ". " + (*this->arr[i]).get_name() + ". Время: " + to_string((*this->arr[i]).get_all_time()) + "\n";
 	}
+	return text;
+};
+
+void Race::finish() {
+	this->type = 0;
+	this->length = 0;
+	this->size = 0;
 };
