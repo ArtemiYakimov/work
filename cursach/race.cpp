@@ -34,7 +34,7 @@ string Race::add(Earthair* other) {
 	}
 };
 
-string Race::start() {
+void Race::start() {
 	for (int i = 0; i < this->size; i++) {
 		(*this->arr[i]).time_tranport(this->length);
 	}
@@ -53,16 +53,22 @@ string Race::start() {
 		this->arr[y] = this->arr[i];
 		this->arr[i] = other;
 	}
-
-	string text = "";
-	for (int i = 0; i < this->size; i++) {
-		text += to_string(i + 1) + ". " + (*this->arr[i]).get_name() + ". Время: " + to_string((*this->arr[i]).get_all_time()) + "\n";
-	}
-	return text;
 };
 
 void Race::finish() {
 	this->type = 0;
 	this->length = 0;
 	this->size = 0;
+};
+
+int Race::get_count() {
+	return this->size;
+};
+
+Earthair* Race::get_transport() {
+	Earthair* earthairs = new Earthair[this->size];
+	for (int i = 0; i < this->size; i++) {
+		earthairs[i] = *this->arr[i];
+	}
+	return earthairs;
 };

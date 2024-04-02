@@ -18,6 +18,8 @@ public:
 	}
 	string get_all_name();
 	string add(Earthair* other);
-	string start();
+	void start();
 	void finish();
+	int get_count();
+	Earthair* get_transport();
 };
