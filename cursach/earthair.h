@@ -7,11 +7,11 @@ private:
 protected:
 	string name;
 	int type, speed;
-	int all_time;
+	double all_time;
 	int time;
 public:
 	string get_name();
 	int get_type();
-	int get_all_time();
+	double get_all_time();
 	virtual void time_tranport(int s);
 };

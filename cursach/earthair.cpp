@@ -8,7 +8,7 @@ int Earthair::get_type() {
 	return this->type;
 };
 
-int Earthair::get_all_time() {
+double Earthair::get_all_time() {
 	return this->all_time;
 };
 

@@ -18,5 +18,6 @@ public:
 	}
 	string get_all_name();
 	string add(Earthair* other);
-	void start();
+	string start();
+	void finish();
 };
