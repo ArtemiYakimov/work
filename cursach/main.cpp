@@ -42,10 +42,21 @@ int main() {
             }
         } while (flag);
 
+        bool flag9 = true;
         int length;
 
-        cout << "Укажите длину дистанции(длина должна быть положительной): ";
-        cin >> length;
+        do {
+            cout << "Укажите длину дистанции(длина должна быть положительной): ";
+            cin >> length;
+            if (length > 0) {
+                flag9 = false;
+            }
+            else if(length <= 0) {
+                flag9 = true;
+                cout << "Значение должно быть положительным!" << endl;
+            }
+        } while (flag9);
+
 
         Race race(type_race, length);
 
